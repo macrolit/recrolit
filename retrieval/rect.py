@@ -1,1 +1,1 @@
-print "You got rect!"
+print ("You got rect!")
