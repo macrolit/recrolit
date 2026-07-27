@@ -7,7 +7,7 @@ author: Macrolit
 repository: https://github.com/macrolit/recrolit
 entry_point: main.py
 workflow:
-  requisites: 
+  constraints: 
     - needed: [username/global_convert, thisuser/something-script]                                        # needs formatted input
     - suggested: [username/yaml-retriever]
     - conflicts: [someuser/automate-general]                                                              # lists modules that should definitely not be ran in the same batch
