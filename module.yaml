@@ -1,0 +1,23 @@
+name: recrolit
+category: retrieval
+version: 1.0.0
+min_rec_version: 0.2.0
+description: Test plugin
+author: Macrolit
+repository: https://github.com/macrolit/recrolit
+entry_point: main.py
+workflow:
+  requisites: 
+    - needed: [username/global_convert, thisuser/something-script]                                        # needs formatted input
+    - suggested: [username/yaml-retriever]
+    - conflicts: [someuser/automate-general]                                                              # lists modules that should definitely not be ran in the same batch
+  placement:
+    - {after: convert, adjacency: immediate}
+    - {before: retrieve, adjacency: open}
+  rules: {required: false, frequency: "1+", repeat: true}                                    # Use "required: true" ONLY if module is absolutely necessary to continue the pipeline 
+  accepts: "Nothing"
+  provides: "A message"
+  input: Null
+  output: Terminal                                                               # optional field, depending on wether the script outputs a file (mandatory in this case)
+  conditions: "May be ran anytime"
+  notes: Use the -h, --help command for more detailed usage instructions
