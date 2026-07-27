@@ -7,7 +7,7 @@ author: Macrolit
 repository: https://github.com/macrolit/recrolit
 entry_point: main.py
 workflow:
-  constraints: 
+  requisites: 
     - needed: [username/global_convert, thisuser/something-script]                                        # needs formatted input
     - suggested: [username/yaml-retriever]
     - conflicts: [someuser/automate-general]                                                              # lists modules that should definitely not be ran in the same batch
@@ -19,5 +19,5 @@ workflow:
   provides: "A message"
   input: Null
   output: Terminal                                                               # optional field, depending on wether the script outputs a file (mandatory in this case)
-  conditions: "May be ran anytime"
+  conditions: "No conditions whatsoever"                                         
   notes: Use the -h, --help command for more detailed usage instructions
